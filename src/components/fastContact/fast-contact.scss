@@ -1,0 +1,29 @@
+@import './../../sass/mediaQueries.scss';
+
+.info{
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  // border: 5px solid red;
+  @include desktop{
+    display: block;
+  }
+}
+
+.info__data{
+  // border: 2px solid blue;
+  display: inline-block;
+  margin:0;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+}
+
+.info__link{
+  color: inherit;
+  text-decoration: none;
+}
+
+.info__link:hover{
+  color: #444;
+}

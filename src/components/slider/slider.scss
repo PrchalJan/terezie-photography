@@ -1,0 +1,159 @@
+@import './../../sass/mediaQueries.scss';
+
+$phone-carousel-height: 65vw;
+$tablet-carousel-height: 48vw;
+$desktop-carousel-height: 35vw;
+
+
+
+
+
+.slider {
+  // overflow-y: scroll !important;
+  overflow: hidden !important;
+  margin-bottom: 50px;
+  
+  @include mobile{
+    height: $tablet-carousel-height !important;
+  } 
+  @include mobile-small{
+    height: $phone-carousel-height !important;
+  } 
+  @include desktop{
+    height: $desktop-carousel-height !important;
+  } 
+  
+}
+
+.slider-btn{
+  position: absolute;
+  z-index: 1000;
+  
+  // border: 2px solid yellow;
+  
+  @include mobile{
+    height: $tablet-carousel-height;
+    width: 9vw;
+  } 
+  @include mobile-small{
+    height: $phone-carousel-height;
+    width: 11vw;
+  } 
+  @include desktop{
+    height: $desktop-carousel-height;
+    width: 5vw;
+  } 
+}
+
+.slider-btn:hover{
+  
+  transition: background-color .1s;
+  @include desktop{
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.siema-btn__left{
+  left: 0;
+}
+.siema-btn__right{
+  right: 0;
+}
+
+.right-icon{
+  // border: 1px solid red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 4vw;
+  @include mobile{
+    width: 5vw;
+  }
+  @include mobile-small{
+    width: 5vw;
+  }
+  @include desktop{
+    width: 3vw;
+  }
+}
+
+.left-icon{
+  // border: 1px solid red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4vw;
+  @include mobile{
+    width: 5vw;
+  }
+  @include mobile-small{
+    width: 5vw;
+  }
+  @include desktop{
+    width: 3vw;
+  }
+}
+
+.siema{
+  position: relative;
+  
+  // border: 4px solid green;
+  
+  @include mobile{
+    width: 220vw;
+    left: -60vw;
+    height: $tablet-carousel-height;
+  }
+  @include mobile-small{
+    width: 300vw;
+    left: -100vw;
+    height: $phone-carousel-height;
+  } 
+  @include desktop{
+    width: 160vw;
+    left: -30vw;
+    height: $desktop-carousel-height;
+  }
+  
+}
+
+.siema-item{
+  // border: 3px solid red;
+
+  @include mobile{
+    padding-left: .4rem;
+    padding-right: .4rem;
+  }
+  @include mobile-small{
+    padding-left: .3rem;
+    padding-right: .3rem;
+  }
+  
+  @include desktop{
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+  
+
+}
+
+.siema-image{
+  display: block;
+  object-fit: cover ;
+  object-position: center;
+  width: 100%;
+  
+  @include mobile{
+    height: $tablet-carousel-height !important;
+  } 
+  @include mobile-small{
+    height: $phone-carousel-height !important;
+  } 
+  @include desktop{
+    height: $desktop-carousel-height !important;
+  } 
+
+}

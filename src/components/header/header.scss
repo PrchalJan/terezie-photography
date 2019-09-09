@@ -1,0 +1,57 @@
+
+
+
+@import './../../sass/mediaQueries.scss';
+
+// @import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+.header{
+  // border: 2px solid green;
+  overflow: hidden;
+  
+  @include mobile{
+    padding: 3rem 0 2rem 0;
+  }
+  @include desktop{
+    padding: 4rem 0 3rem 0;
+  }
+}
+
+.header__h1,
+.header__h2{
+  // border: 2px solid blue;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  // font-family: 'Roboto', sans-serif;
+  // font-family: 'Varela Round', sans-serif;
+  // font-family: 'Monda', sans-serif;
+  // font-family: 'Comfortaa', cursive;
+
+  color: #333;
+  font-weight: 400;
+  word-spacing: 7px;
+}
+
+.header__h1{
+  
+  @include mobile-small{
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+  @include desktop{
+    margin-bottom: 1rem;
+    font-size: 4.5rem;
+  }
+
+} 
+
+.header__h2{
+  @include mobile-small{
+    font-size: 2rem;
+  }
+  @include desktop{
+    font-size: 3rem;
+  }
+  
+}

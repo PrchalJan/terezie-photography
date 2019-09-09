@@ -1,0 +1,97 @@
+@import './../../sass/mediaQueries.scss';
+
+
+
+.footer{
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer__container{
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.footer__row{
+  padding: 2rem 0 2rem 0;
+  
+  @include mobile {
+    display: flex;
+  }
+  @include mobile-small {
+    display: block;
+    padding: 0 0 2rem 0;
+  }
+  @include desktop {
+    display: flex;
+  }
+}
+
+.footer__content{
+  // border: 2px solid red;
+  padding: 0 2rem;
+  
+  @include mobile{
+    width: 70%;
+  }
+  @include mobile-small{
+    // width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+  @include desktop{
+    width: 70%;
+  }
+}
+.footer__links{
+  // border: 2px solid red;
+  padding: .5rem 2rem;
+  @include mobile{
+    width: 30%;
+  }
+  @include mobile-small{
+    // width: 100%;
+    margin: auto;
+  }
+  @include desktop{
+    width: 30%;
+  }
+}
+.links__ul{
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  @include mobile-small{
+    
+  }
+}
+.links__li{
+  // border: 1px solid black;
+  text-align: center;
+  padding: .5rem 1rem;
+  @include mobile-small{
+
+  }
+
+
+}
+.links__icon{
+  width: 2.5rem;
+  vertical-align: middle;
+}
+
+
+.footer__copy{
+  // border: 2px solid red;
+  text-align: center;
+  padding: 4rem 0 2rem 0;
+  font-size: 1.5rem;
+  @include mobile-small{
+    padding: 0rem 0 4rem 0;
+  }
+}
+.copy__p{
+  // border: 2px solid yellow;
+}

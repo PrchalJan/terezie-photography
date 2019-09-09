@@ -1,0 +1,52 @@
+@import './../../sass/mediaQueries.scss';
+
+// @import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+
+
+.nav {
+  // border: 2px solid red;
+  overflow: hidden;
+  // background-color: white;
+  @include mobile{
+    padding-bottom: 2rem;
+  }
+  @include desktop{
+    padding-bottom: 4rem;
+  }
+}
+
+.nav__ul{
+  // border: 4px solid blue;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.nav__li{
+  // border: 4px solid yellow;
+  display: inline-block;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.nav__link{
+  color: #333;
+  text-transform: uppercase;
+  text-decoration: none;
+  // font-family: 'Comfortaa', cursive;
+  
+  @include mobile{
+    font-weight: 400;
+  }
+  @include mobile-small{
+    font-size: 1.6rem;
+  }
+  @include desktop{
+    font-weight: 400;
+  }
+}
+
+.nav__link:hover{
+  color: #000;
+}
