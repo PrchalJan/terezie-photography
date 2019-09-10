@@ -21,10 +21,32 @@ class Slider extends React.Component{
   constructor(){
     super();
     this.siema = undefined;
+    this.running = undefined;
+    this.interval = undefined;
 
   }
 
-  
+  startIteration = ()=>{
+    this.interval = setInterval(()=>{
+      this.siema.next();
+    }, 5000)
+    this.running = true;
+  }
+  clearIteration = ()=>{
+    if(this.running){
+      clearInterval(this.interval);
+      this.running = false;
+    }
+  }
+  slideRight = ()=>{
+    this.siema.next();
+    this.clearIteration();
+  }
+  slideLeft = ()=>{
+    this.siema.prev();
+    this.clearIteration();
+  }
+
 
   componentDidMount(){
     const mySiema = new Siema({
@@ -33,16 +55,13 @@ class Slider extends React.Component{
       loop: true,
       easing: 'ease-out',
     });
-
     this.siema = mySiema;
+    this.startIteration();
   }
 
-  slideRight = ()=>{
-    this.siema.next();
-  }
-  slideLeft = ()=>{
-    this.siema.prev();
-  }
+  
+
+  
 
 
   
