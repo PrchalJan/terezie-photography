@@ -14,6 +14,7 @@ import Portfolio from './components/main/portfolio/Portfolio';
 import Sluzby from './components/main/sluzby/Sluzby';
 import About from './components/main/about/about';
 import Contact from './components/main/contact/Contact';
+import Home from './components/main/home/Home';
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
         <main>
           <FastContact/>
           <Route exact path="/" component={Slider} />
+          <Route exact path="/" component={Home} />
+          
           <Route exact path="/portfolio" component={Portfolio} />
           <Route exact path="/sluzby" component={Sluzby} />
           <Route exact path="/about" component={About} />
